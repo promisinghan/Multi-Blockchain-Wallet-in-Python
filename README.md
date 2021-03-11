@@ -48,14 +48,16 @@ Now, fund the wallets using testnet faucet. Open up a new terminal window (gitba
 ![successful funding transaction to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest_transaction.png "Displaying the successful funding transaction to my 1st BTCTEST wallet")
 
 3. Send a transaction to another testnet address (either one of your own, or the faucet).
+
+I ran *python test_BTCTEST.py* on Gitbash after running *python wallet.py*, instead of using Python shell on Gitbash.
+After that, I went to the block explorer to watch transactions and then screenshotted them as below.
+
 ![transacting BTCTEST to 2nd wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest.png "Sending BTCTEST from my 1st wallet to 2nd wallet")
 
 4. Screenshot the confirmation of the transaction like so:
+
+
 ![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png "Successful BTCTEST transaction from my 1st wallet to 2nd wallet")
-
-
-
-
 
 
 
