@@ -33,25 +33,25 @@ HD wallet tree is represented by derivation paths to the first address node. For
 To construct a transaction, the users use the private key of the address node to sign a transaction spending money from the address node's public key.
 
 
-## Test transactions
+## Send some transactions!
 Now, fund the wallets using testnet faucet. Open up a new terminal window (gitbash on windows) inside of the project folder/directory, then run *python*. Within the Python shell, run from wallet import *  - you can now access the functions in the wallet.py (your universal wallet script) interactively. You'll need to set the account with *priv_key_to_account* and use *send_tx* to send transactions.
 - ### BTCTEST transaction
 1. Fund a BTCTEST address using the [bitcoin testnet faucet](https://testnet-faucet.mempool.co/).
 
-![funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest.png)
+![funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest.png "Funding BTCTEST to my 1st BTCTEST wallet")
 
 
 2. Use a [block explorer](https://tbtc.bitaps.com/) to watch transactions on the address.
 
-![successful funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_1stwallet_btctest.png)
+![successful funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_1stwallet_btctest.png "Succesfully funded BTCTEST to my 1st wallet")
 
-![successful funding transaction to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest_transaction.png)
+![successful funding transaction to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest_transaction.png "Displaying the successful funding transaction to my 1st BTCTEST wallet")
 
 3. Send a transaction to another testnet address (either one of your own, or the faucet).
-![transacting BTCTEST to 2nd wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest.png)
+![transacting BTCTEST to 2nd wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest.png "Sending BTCTEST from my 1st wallet to 2nd wallet")
 
 4. Screenshot the confirmation of the transaction like so:
-![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png)
+![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png "Successful BTCTEST transaction from my 1st wallet to 2nd wallet")
 
 
 
