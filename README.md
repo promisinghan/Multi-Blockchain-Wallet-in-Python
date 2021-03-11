@@ -38,18 +38,20 @@ Now, fund the wallets using testnet faucet. Open up a new terminal window (gitba
 - ### BTCTEST transaction
 1. Fund a BTCTEST address using the [bitcoin testnet faucet](https://testnet-faucet.mempool.co/).
 
-![funding BTCTEST to 1st wallet](https://github.com/promisinghan/
-
-
- ![screenshot1](https://github.com/promisinghan/Blockchain/blob/main/screenshot/screenshot1.PNG))
-
+![funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest.png)
 
 
 2. Use a [block explorer](https://tbtc.bitaps.com/) to watch transactions on the address.
 
+![successful funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_1stwallet_btctest.png)
+
+![successful funding transaction to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest_transaction.png)
+
 3. Send a transaction to another testnet address (either one of your own, or the faucet).
+![transacting BTCTEST to 2nd wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest.png)
 
 4. Screenshot the confirmation of the transaction like so:
+![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png)
 
 
 
