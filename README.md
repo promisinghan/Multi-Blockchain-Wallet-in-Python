@@ -62,6 +62,34 @@ After that, I went to the block explorer to watch transactions and then screensh
 
 - ### Ethereum transaction
 
+1. Fund one of the ETH addresses by adding it to the pre-allocated accounts in your networkname.json 
+In my case, I added the first ETH address (index 0) to melon.json as shown in the below screenshot.
+
+![Adding one of the ETH addresses to the pre-allocated accounts in melon.json](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/adding%20mneumonic-derived%20wallet%20to%20custom%20network%20json%20file%20to%20prefund.png "I added the first ETH addresses to the pre-allocated accounts in melon.json to pre-fund it")
+
+
+2. Delete the geth folder in each node, then re-initialize using geth --datadir nodeX init networkname.json. This will create a new chain, and will pre-fund the new account.
+In my case, I ran
+
+ ./geth --datadir node1 --unlock 0xa1cE03EB9453d9D68902a6CD7d53B653b142BA9D --mine --rpc --allow-insecure-unlock
+
+ for node1, and I ran 
+
+ ./geth --datadir node2 --unlock 0x38333aE5426B5900E536A72D538ce8D266D8f601 --mine --port 30304 --bootnodes "enode://aefd693c5555dd40cbd4e92bc09798813f056b767b8aa79c7a737b965f2976179a0e41fa7eb18fc6a48ada6485e465b6ba6445fe8cf723d1c2747ebc131d08bd@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+
+ for node2 on Gitbash inside the Blockchain-Tools folder.
+
+ 3. Add the following middleware to wallet.py to support the PoA algorithm:
+
+ from web3.middleware import geth_poa_middleware
+ 
+ w3.middleware_onion.inject(geth_poa_middleware, layer=0)
+
+ 4. Due to a bug in web3.py, you will need to send a transaction or two with MyCrypto first, since the w3.eth.generateGasPrice() function does not work with an empty chain. You can use one of the ETH address privkey, or one of the node keystore files. 
+I sent a transaction on MyCrypto from my node 1 account to my first ETH address.
+
+5. On Gitbash 
+
 
 
 
