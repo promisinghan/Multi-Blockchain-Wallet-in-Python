@@ -35,7 +35,7 @@ To construct a transaction, the users use the private key of the address node to
 
 ## Send some transactions!
 Now, fund the wallets using testnet faucet. Open up a new terminal window (gitbash on windows) inside of the project folder/directory, then run *python*. Within the Python shell, run from wallet import *  - you can now access the functions in the wallet.py (your universal wallet script) interactively. You'll need to set the account with *priv_key_to_account* and use *send_tx* to send transactions.
-- ### BTCTEST transaction
+- ### BTCTEST transaction (Bitcoin Testnet transaction)
 1. Fund a BTCTEST address using the [bitcoin testnet faucet](https://testnet-faucet.mempool.co/).
 
 ![funding BTCTEST to 1st wallet](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/funding_btctest.png "Funding BTCTEST to my 1st BTCTEST wallet")
@@ -60,7 +60,7 @@ After that, I went to the block explorer to watch transactions and then screensh
 ![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png "Successful BTCTEST transaction from my 1st wallet to 2nd wallet")
 
 
-- ### Ethereum transaction
+- ### Local PoA ETH(Ethereum) transaction
 
 1. Fund one of the ETH addresses by adding it to the pre-allocated accounts in your networkname.json 
 In my case, I added the first ETH address (index 0) to melon.json as shown in the below screenshot.
@@ -88,15 +88,29 @@ In my case, I ran
  4. Due to a bug in web3.py, you will need to send a transaction or two with MyCrypto first, since the w3.eth.generateGasPrice() function does not work with an empty chain. You can use one of the ETH address privkey, or one of the node keystore files. 
 I sent a transaction on MyCrypto from my node 1 account to my first ETH address.
 
-5. On Gitbash 
+5. I made sure Ganache is open to make my local host (RPC SERVER HTTP://127.0.0.1:8545) available.
+
+On Gitbash, I activated ethereum2 environment wehre I installed web3 libary by 
+
+conda activate ethereum2
+
+Then inside my project folder, I ran 
+
+python wallet.py
+
+and then I ran 
+
+python test_ETH.py
+
+I could get the transaction hash or transaction id as a result as shown below, such as 
+
+0xff9e574e7764fc3d93a5c117f9230b1265fa75e74fa740e088237c097248ca9d
+
+![Getting transaction id after transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/running%20wallet%20file%20on%20Gitbash%20in%20ethereum2%20enviroment.png "I obtained the transaction id after I transacted ETH from the 1st wallet address to 2nd wallet address")
 
 
+I copied and pasted this transaction id into MyCrypto's TX Status and screenshot the succssful transaction as shown below:
 
-
-
-
-
-
-
+![Checking transaction status using the transaction id](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/checking%20transaction%20with%20txhash%20on%20Mycrypto.png "I copied and pasted the transaction id obtained into MyCrypto's TX status and screenshotted the successful transaction")
 
 
