@@ -86,9 +86,11 @@ def send_tx(coin, account, to, amount):
     raw_tx = create_raw_tx(coin, account, to, amount)
     signed = account.sign_transaction(raw_tx)
     if coin==ETH:
-        return w3.eth.sendRawTransaction(signed.rawTransaction)
-    
+        results = w3.eth.sendRawTransaction(signed.rawTransaction)
+        print(results.hex())
+        return results.hex()
     elif coin==BTCTEST:        
-        return NetworkAPI.broadcast_tx_testnet(signed)
+        results = NetworkAPI.broadcast_tx_testnet(signed)
+        return results
 
-
+ 

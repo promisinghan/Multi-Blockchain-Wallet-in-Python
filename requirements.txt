@@ -1,0 +1,102 @@
+[1] Installing pip dependencies instructions
+<Installing python libraries for windows>
+This guide serves as a step by step process for setting up and validating the web3.py, bit, and hd-wallet-derive libraries used to programmatically send and receive transactions over a blockchain network via virtual wallets. Without these libraries, class activities and their associated code will not be able to perform the necessary operations.
+
+1. Open a terminal and execute the following commands to install web3.py and bit, respectively. Windows users MUST use the Anaconda Prompt in this section.
+
+2. Open the terminal and in the base environment, run the following code in order:
+ conda update conda
+ conda update anaconda
+
+3. Run the following command to create a brand new Python virtual environment for this unit.
+ conda create -n ethereum python=3.7 anaconda
+
+4. Activate the new environment.
+ conda activate ethereum
+
+5. Use the pip install command to download and install the web3.py module.
+ pip install web3
+
+6. Use the pip install command to download and install the bit module.
+ pip install bit 
+
+
+<Install Microsoft Visual C++ Build Tools In Windows>
+In some cases, the Web3.py library may fail to install in Microsoft Windows due to the need for Microsoft Visual C++ Build Tools. In such an event, following the below steps to resolve the issue:
+
+1. Go to: https://visualstudio.microsoft.com/downloads/
+
+2. Scroll down the page and click on "Tools for Visual Studio 2019" to reveal the sub-options.
+
+3. Download the "Build Tools for Visual Studio 2019" package.
+
+4. Run the package file and select the C++ build tools option. Then click install.
+This process takes about 15 minutes
+
+<Environment Setup for HD-wallet-derive library>
+1. The hd-wallet-derive library is written in the PHP language; therefore, you will be required to first set up PHP on your machines before installing and then running the hd-wallet-derive library.
+
+2. Windows machines do not come with a pre-built PHP and Apache Web Server, and therefore will require both. Luckily, some installers bundle these two together! Visit the XAMPP website and download the installer for Windows; the XAMPP is a popular PHP development environment that is easy to install and configure. Be sure to download version 7, as version 8 can cause issues with the hd-wallet-derive library.
+
+3. Use the XAMPP package to install PHP and its associated dependencies. Keep the defaults for now unless there is a dependency conflict.
+
+4. Then, once the XAMPP package is installed, navigate to the folder where the PHP binaries are located. This should be at C:\xampp\php.
+
+5. Edit the php.ini file (C:\xampp\php\php.ini) using Notepad and add the following line at the end of the file: extension=php_gmp.dll. This will enable a necessary PHP extension that hd-wallet-derive relies on.
+
+6. Next, you need to update the System Environment Variables and add the path containing the PHP binaries (C:\xampp\php) to the PATH environment variable.
+
+7. For this particular step, we will use the Windows Command Prompt as Administrator as follows:
+ In the Cortana search field, type in CMD; you will see the Command Prompt application in the search results, choose the "Run as administrator" option to continue.
+ You will be asked if you want the Command Prompt to make changes in your system, click on the "Yes" button to continue.
+ You will be able to run commands as administrator if you see the title Administrator: Command Prompt in the window. In the administrator's prompt, it’ll say Administrator, while other prompts will not.
+
+8. In this new terminal, type the following command to update the PATH system variable.
+ setx /M PATH "%PATH%;C:\xampp\php"
+
+9. If everything was successful, you will see a confirmation message.
+
+10. Test that the newest version of PHP is working. Close all the terminal windows (git-bash and Windows Command Prompt), open a new git-bash terminal windows, and execute the following command.
+ php -version
+
+11. If you see the following output, then congratulations! Your machine is now updated to the newest version of PHP! The PATH variable was successfully updated and PHP V.7.3 is correctly installed and running.
+ PHP 7.3.12
+
+
+[2] Installing hd-wallet-derive
+
+1. With the latest version of PHP installed on our machines, we can now proceed to the installation of the hd-wallet-derive library.
+
+2. Begin by opening a fresh terminal. Windows users must open their terminal as administator as follows:
+ Input C:\Program Files\Git\bin\bash.exe directly into the system search bar and launch the program as Administrator from the resulting menu.
+
+3. With your terminal open as indicated for your operating system, cd into your `Blockchain-Tools folder and run the following code:
+   git clone https://github.com/dan-da/hd-wallet-derive
+  cd hd-wallet-derive
+  curl https://getcomposer.org/installer -o installer.php
+  php installer.php
+  php composer.phar install
+
+4.  You should now have a folder called hd-wallet-derive containing the PHP library!
+
+
+[3] Creating a symlink called "derive" for the hd-wallet-derive/hd-wallet-derive.php script into the top level project folder(Blockchain-Tools folder in the below example). This will clean up the command needed to run the script in our code, as we can call ./derive instead of ./hd-wallet-derive/hd-wallet-derive.php.
+
+<Steps for creating hd-wallet Symlink on Gitbash as administrator>
+1	cd  ..../Blockchain-Tools/hd-wallet-derive
+: This is an example file path. Go to hd-wallet-derive folder.
+
+2	export MSYS=winsymlinks:nativestric
+: Run the code above on Gitbash opened as administrator
+
+3	cd ..
+: Go back to Blockchain-Tools folder.
+
+4	ln -s hd-wallet-derive/hd-wallet-derive.php derive
+: Run the above code on Gitbash
+
+5	./derive -g --mnemonic="YOUR MNEMONIC GOES HERE" --cols=path,address,privkey,pubkey 
+: Run the above code on Gitbash to see the wallet addresses using your own 12 mnemonic phrase inside the quotes.
+
+
+Congratulations! The hd-wallet-derive library should now be working and good to go!

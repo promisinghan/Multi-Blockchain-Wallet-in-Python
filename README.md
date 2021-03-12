@@ -60,8 +60,6 @@ After that, I went to the block explorer to watch transactions and then screensh
 ![successful Bitcoin testnet transaction](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/transaction_to_2ndwallet_btctest_transaction.png "Successful BTCTEST transaction from my 1st wallet to 2nd wallet")
 
 
-
-
 - ### Ethereum transaction
 
 
