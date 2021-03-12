@@ -22,7 +22,7 @@ In this assignment, however, you will only need to get 2 coins working: Ethereum
 
 ## Short desciprtion about the wallet
 (from [investopedia.com](https://www.investopedia.com/terms/h/hd-wallet-hierarchical-deterministic-wallet.asp ) and
-from [medium.com](https://medium.com/@harshagoli/hd-wallets-explained-from-high-level-to-nuts-and-bolts-9a41545f5b0))
+ [medium.com](https://medium.com/@harshagoli/hd-wallets-explained-from-high-level-to-nuts-and-bolts-9a41545f5b0))
 - What does the HD wallet (Hierarchical Deterministic wallet) do?
 : Hierarchical Deterministic wallet (HD wallet) is a new-age digital wallet that automatically generates a hierarchical tree-like structure of public/private addresses (or keys), to address the problem of the user having to generate them on their own. Simply put, the HD wallet is a public/private key tree all starting from a root node (master node).
 
