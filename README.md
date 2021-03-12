@@ -90,7 +90,7 @@ I sent a transaction on MyCrypto from my node 1 account to my first ETH address.
 
 5. I made sure Ganache is open to make my local host (RPC SERVER HTTP://127.0.0.1:8545) available.
 
-On Gitbash, I activated ethereum2 environment wehre I installed web3 libary by 
+On Gitbash, I activated ethereum2 environment where I installed web3 libary by 
 
 conda activate ethereum2
 
@@ -112,5 +112,11 @@ I could get the transaction hash or transaction id as a result as shown below, s
 I copied and pasted this transaction id into MyCrypto's TX Status and screenshot the succssful transaction as shown below:
 
 ![Checking transaction status using the transaction id](https://github.com/promisinghan/multi_blockchain_wallet_in_python/blob/main/screenshot/checking%20transaction%20with%20txhash%20on%20Mycrypto.png "I copied and pasted the transaction id obtained into MyCrypto's TX status and screenshotted the successful transaction")
+
+
+Celebrate the fact that I now have an incredibly powerful wallet that I can expand to hundreds of coins!
+![Let's celebrate](https://cdn.pixabay.com/photo/2017/01/04/21/00/new-years-eve-1953253_1280.jpg "Let's celebrate!")
+
+*Photo from [pixabay.com](https://pixabay.com/photos/new-year-s-eve-fireworks-beacon-1953253/) by [nck_gsl](https://pixabay.com/users/nck_gsl-3554748/)*
 
 
